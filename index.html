@@ -16,6 +16,12 @@
     <meta property="og:url" content="https://lolocoding.com" />
     <meta name="twitter:card" content="summary" />
     <link
+      rel="alternate"
+      type="text/markdown"
+      href="https://lauren.md/index.md"
+      title="Lauren Lee, for AI agents"
+    />
+    <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23F2E9D7'/%3E%3Cg fill='%23ABB2C6' stroke='%23104E58' stroke-width='4'%3E%3Cellipse cx='50' cy='28' rx='10' ry='17'/%3E%3Cellipse cx='50' cy='72' rx='10' ry='17'/%3E%3Cellipse cx='28' cy='50' rx='17' ry='10'/%3E%3Cellipse cx='72' cy='50' rx='17' ry='10'/%3E%3C/g%3E%3Ccircle cx='50' cy='50' r='10' fill='%23EC8366' stroke='%23104E58' stroke-width='4'/%3E%3C/svg%3E"
     />
@@ -342,6 +348,18 @@
       .sticker.up:focus-visible .tag {
         transform: translate(-50%, -10px) rotate(-2deg);
       }
+      /* wide screens: the pencil sits right above "olá", so its label goes beside it */
+      @media (min-width: 1181px) {
+        .sticker[href^="https://dev.to"] .tag {
+          top: 38%;
+          left: 100%;
+          transform: translate(4px, -50%) rotate(-5deg);
+        }
+        .sticker[href^="https://dev.to"]:hover .tag,
+        .sticker[href^="https://dev.to"]:focus-visible .tag {
+          transform: translate(10px, -50%) rotate(-5deg);
+        }
+      }
       @keyframes pop {
         from {
           opacity: 0;
@@ -451,7 +469,7 @@
         .sticker[data-row="top"] {
           order: 0;
           width: min(18vw, 96px) !important;
-          align-self: center;
+          align-self: flex-end;
           margin-bottom: 26px;
         }
         .sticker[data-row="bottom"] {
@@ -472,7 +490,7 @@
         .sticker.me {
           order: 3 !important;
         }
-        .sticker[data-card="5"] {
+        .sticker[data-card="6"] {
           order: 4 !important;
         }
         .sticker.me {
@@ -497,6 +515,37 @@
           left: auto;
           right: -18%;
           transform: rotate(4deg);
+        }
+      }
+      @media (max-width: 480px) {
+        .sticker .tag {
+          font-size: 10px;
+          padding: 2px 7px 3px;
+        }
+        .sticker[href^="https://dev.to"] {
+          margin-left: 14px;
+          margin-right: 14px;
+        }
+      }
+      /* small screens: each label gets its own tilt and drop */
+      @media (max-width: 1180px) {
+        .sticker[href="#index"] .tag {
+          transform: translate(-50%, 4px) rotate(-6deg);
+        }
+        .sticker[data-card="0"] .tag {
+          transform: translate(-50%, 14px) rotate(4deg);
+        }
+        .sticker[href^="https://dev.to"] .tag {
+          transform: translate(-50%, 2px) rotate(-3deg);
+        }
+        .sticker[data-card="2"] .tag {
+          transform: translate(-50%, 12px) rotate(7deg);
+        }
+        .sticker[data-card="6"] .tag {
+          transform: translate(-50%, -10px) rotate(5deg);
+        }
+        .sticker.mic .tag {
+          transform: translate(-50%, -4px) rotate(-5deg);
         }
       }
 
@@ -1565,8 +1614,21 @@
       >
       <a
         class="sticker"
+        href="https://dev.to/lolocoding"
+        target="_blank"
+        rel="noopener"
+        data-x="46"
+        data-y="3"
+        data-row="top"
+        style="width: 46px"
+        ><span class="inner"
+          ><svg viewBox="0 0 60 130"><use href="#s-pencil" /></svg></span
+        ><span class="tag">my writing</span></a
+      >
+      <a
+        class="sticker"
         href="#work"
-        data-card="5"
+        data-card="6"
         data-x="61"
         data-y="5"
         data-row="bottom"
@@ -1578,27 +1640,14 @@
       <a
         class="sticker"
         href="#work"
-        data-card="6"
+        data-card="2"
         data-x="76"
         data-y="10"
         data-row="top"
         style="width: 160px"
         ><span class="inner"
           ><svg viewBox="0 0 150 70"><use href="#s-sardine" /></svg></span
-        ><span class="tag">on docs</span></a
-      >
-      <a
-        class="sticker"
-        href="https://dev.to/lolocoding"
-        target="_blank"
-        rel="noopener"
-        data-x="16"
-        data-y="34"
-        data-row="top"
-        style="width: 46px"
-        ><span class="inner"
-          ><svg viewBox="0 0 60 130"><use href="#s-pencil" /></svg></span
-        ><span class="tag">my writing</span></a
+        ><span class="tag">for AI agents</span></a
       >
       <a
         class="sticker hide-sm"
@@ -1626,8 +1675,8 @@
       <a
         class="sticker hide-sm"
         href="#path"
-        data-x="9"
-        data-y="58"
+        data-x="13"
+        data-y="46"
         style="width: 72px"
         ><span class="inner"
           ><svg viewBox="0 0 100 130"><use href="#s-flower" /></svg></span
@@ -1828,6 +1877,28 @@
                     href="https://dev.to/lolocoding/164-disposable-computers-one-judging-afternoon-and-a-question-nobody-had-time-to-ask-19da"
                     >Write-up</a
                   >
+                </div>
+              </div>
+            </article>
+            <article class="pcard">
+              <div
+                class="art"
+                style="background: linear-gradient(135deg, #104e58, #cfd47d)"
+              >
+                <svg viewBox="0 0 90 110"><use href="#s-docs" /></svg>
+              </div>
+              <div class="body">
+                <p class="kind">Built, 2026</p>
+                <h3>lauren.md</h3>
+                <p>
+                  A version of me written for AI agents. When someone asks an
+                  assistant about me, it can read my work, my availability, and
+                  rules for quoting me accurately, all from one Markdown file I
+                  keep current.
+                </p>
+                <div class="go">
+                  <a href="https://lauren.md">Visit</a
+                  ><a href="https://lauren.md/index.md">See what agents read</a>
                 </div>
               </div>
             </article>
@@ -2176,6 +2247,10 @@
             <h3>built</h3>
             <ul>
               <li>
+                <a href="https://lauren.md">lauren.md</a
+                ><small>My site for AI agents, served as Markdown</small>
+              </li>
+              <li>
                 <a href="https://github.com/laurenelee/hackjudge">hackjudge</a
                 ><small>Sandboxed hackathon judging on Fly Sprites</small>
               </li>
@@ -2241,6 +2316,7 @@
             <a href="https://x.com/LoLoCoding">X</a>
             <a href="https://github.com/laurenelee">GitHub</a>
             <a href="https://dev.to/lolocoding">DEV</a>
+            <a href="https://lauren.md">lauren.md (for AI agents)</a>
           </p>
         </div>
 
@@ -2493,6 +2569,11 @@
           },
           { label: "DEV", name: "DEV", href: "https://dev.to/lolocoding" },
           {
+            label: ".md",
+            name: "lauren.md (for AI agents)",
+            href: "https://lauren.md",
+          },
+          {
             label: "talks",
             name: "my talks",
             href: "https://www.youtube.com/playlist?list=PLegenQQNme4A",
@@ -2507,7 +2588,7 @@
         var NS = "http://www.w3.org/2000/svg",
           C = 210,
           R = 142,
-          HOLE = 30,
+          HOLE = 28,
           STOP = 58;
         var maskG = document.getElementById("holeMask"),
           labG = document.getElementById("labels"),
@@ -2523,7 +2604,7 @@
         }
 
         links.forEach(function (l, i) {
-          var ang = -50 - i * 30,
+          var ang = -50 - i * 27,
             rad = (ang * Math.PI) / 180;
           var x = C + R * Math.cos(rad),
             y = C + R * Math.sin(rad);
