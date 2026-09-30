@@ -6,7 +6,7 @@
     <title>Lauren Lee</title>
     <meta
       name="description"
-      content="Lauren Lee leads developer experience and ecosystem teams. Developers rarely say they're stuck. They just leave, so she builds programs that notice, and judges them by what people ship."
+      content="Lauren Lee leads developer experience and ecosystem teams. Developer experience is a growth metric: she finds where developers get stuck and proves what fixing it is worth."
     />
     <meta property="og:title" content="Lauren Lee" />
     <meta
@@ -15,11 +15,11 @@
     />
     <meta property="og:url" content="https://lolocoding.com" />
     <meta property="og:image" content="https://lolocoding.com/og.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="2400" />
+    <meta property="og:image:height" content="1260" />
     <meta
       property="og:image:alt"
-      content="Lauren Lee beside the words: Developers rarely say they're stuck. They just leave. I build programs that notice."
+      content="Lauren Lee beside the words: Developer experience is a growth metric. I find where developers get stuck and prove what fixing it is worth."
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link
@@ -236,6 +236,9 @@
         font-size: 1.06em;
         line-height: 1.02;
         letter-spacing: 0.005em;
+      }
+      h1 .h1-b + .h1-a {
+        margin: 0.45em 0 0;
       }
       h1 .mark {
         position: relative;
@@ -532,6 +535,17 @@
         .sticker[href^="https://dev.to"] {
           margin-left: 14px;
           margin-right: 14px;
+        }
+      }
+      /* phones: keep the hero from feeling crammed */
+      @media (max-width: 600px) {
+        h1 .h1-b + .h1-a {
+          font-size: 0.6em;
+          margin-top: 0.6em;
+        }
+        .hero-copy .hero-sub {
+          font-size: 16px;
+          margin-bottom: 22px;
         }
       }
       /* small screens: each label gets its own tilt and drop */
@@ -1718,11 +1732,10 @@
       <div class="hero-copy">
         <span class="hello">olá, I'm Lauren</span>
         <h1>
-          <span class="h1-a">Developers rarely say they're stuck.</span>
           <span class="h1-b"
-            >They just leave, so I build programs that
+            >Developer experience is a
             <span class="mark"
-              >notice<svg
+              >growth metric<svg
                 viewBox="0 0 200 20"
                 preserveAspectRatio="none"
                 aria-hidden="true"
@@ -1736,11 +1749,14 @@
                 /></svg></span
             >.</span
           >
+          <span class="h1-a"
+            >I find where developers get stuck and prove what fixing it is
+            worth.</span
+          >
         </h1>
         <p class="hero-sub">
-          I lead developer experience and ecosystem teams from Portugal. Every
-          program I build works like a course, and I judge it by what people
-          ship.
+          I lead ecosystem teams, and every program I build works like a
+          course.
         </p>
         <div class="ctas">
           <a class="btn hot" href="#work">See the work</a>
@@ -2061,8 +2077,11 @@
               <p>
                 Player-coach across advocacy, developer education, docs, and
                 developer experience, through mainnet. Built the largest team at
-                the Foundation and owned the budget, partner agreements, and
-                what got reported to the executive team.
+                the Foundation, owned the budget and what got reported to the
+                executive team, and negotiated several partner agreements. Put
+                Midnight in Electric Capital's developer data for the first
+                time, and built the process that qualified and submitted all of
+                its roughly 1,700 repositories.
               </p>
             </div>
           </li>
@@ -2311,9 +2330,9 @@
           <p>
             I'm looking for my next leadership role helping a platform grow the
             ecosystem around it. The title might say developer experience,
-            partnerships, or something I haven't seen yet. I'm based in
-            Portugal, I work with teams anywhere, and I'm open to permanent or
-            contract roles.
+            ecosystem, or something I haven't seen yet. I'm based in Portugal
+            and work with teams anywhere. I'm open to permanent or contract
+            roles, and I can contract through my US company.
           </p>
           <p>Tap a circle on the dial to reach me.</p>
           <p class="plain">
@@ -2452,7 +2471,7 @@
 
     <footer>
       <div class="wrap">
-        <span>© 2026 Lauren Lee, Portugal</span>
+        <span>© 2026 Lauren Lee</span>
         <span
           ><b>off the clock:</b> I'm training for my next triathlon or out on
           the ice with my hockey team</span
