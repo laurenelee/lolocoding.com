@@ -716,6 +716,91 @@
         }
       }
 
+      /* ---------- on air ---------- */
+      .onair {
+        padding: 88px 0;
+        background: var(--paper);
+        border-top: 2px solid var(--teal);
+        border-bottom: 2px solid var(--teal);
+      }
+      .onair-grid {
+        display: grid;
+        grid-template-columns: 1fr 260px;
+        gap: 64px;
+        align-items: center;
+      }
+      .onair h2 {
+        font-size: clamp(30px, 3.8vw, 46px);
+      }
+      .onair p {
+        font-family: var(--serif);
+        font-variation-settings: "SOFT" 100;
+        font-size: 20px;
+        line-height: 1.6;
+        margin: 0 0 18px;
+      }
+      .onair p.eyebrow {
+        font-family: var(--sans);
+        font-size: 13px;
+        line-height: 1.4;
+        color: var(--coral);
+      }
+      .onair .ctas {
+        justify-content: flex-start;
+        margin-top: 28px;
+      }
+      .onair-sign {
+        font-family: var(--display);
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 1;
+        text-align: center;
+        color: var(--cream);
+        background: var(--coral);
+        border: 3px solid var(--teal);
+        border-radius: 22px;
+        padding: 28px 18px;
+        box-shadow: 6px 6px 0 var(--teal);
+        transform: rotate(-4deg);
+        user-select: none;
+      }
+      .onair-sign span {
+        display: block;
+        font-family: var(--sans);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-top: 10px;
+        color: var(--teal);
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .onair-sign {
+          animation: onair-glow 2.4s ease-in-out infinite;
+        }
+        @keyframes onair-glow {
+          50% {
+            box-shadow:
+              6px 6px 0 var(--teal),
+              0 0 36px rgba(236, 131, 102, 0.55);
+          }
+        }
+      }
+      @media (max-width: 860px) {
+        .onair {
+          padding: 64px 0;
+        }
+        .onair-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .onair-sign {
+          order: -1;
+          max-width: 220px;
+          font-size: 52px;
+        }
+      }
+
       /* ---------- deck ---------- */
       .deck-sec {
         background: var(--teal);
@@ -1602,6 +1687,7 @@
     <nav class="dock" aria-label="Sections">
       <a href="#top" style="--c: var(--teal)">Lauren</a>
       <a href="#about" style="--c: var(--coral)">About</a>
+      <a href="#onair" style="--c: var(--tang)">On air</a>
       <a href="#work" style="--c: var(--tang)">Work</a>
       <a href="#path" style="--c: var(--chart)">Path</a>
       <a href="#index" style="--c: var(--lav)">Index</a>
@@ -1851,6 +1937,55 @@
       </div>
     </section>
 
+    <!-- ================= on air ================= -->
+    <section class="onair" id="onair">
+      <div class="wrap onair-grid">
+        <div>
+          <p class="eyebrow">Now hosting</p>
+          <h2>
+            I learned to code with
+            <a href="https://www.codenewbie.org" target="_blank" rel="noopener"
+              >CodeNewbie</a
+            >
+            in my ears. Now I host it.
+          </h2>
+          <p>
+            The CodeNewbie podcast is back, from Major League Hacking and DEV.
+            This season is for people who built something with AI and want to
+            understand what's underneath it, through the stories of the people
+            who figured it out first. New episodes come out on Wednesdays.
+          </p>
+          <p>
+            Got a question you'd rather not ask out loud? Send it in. It might
+            open an episode.
+          </p>
+          <div class="ctas">
+            <a
+              class="btn hot"
+              href="https://www.codenewbie.org/podcast"
+              target="_blank"
+              rel="noopener"
+              >Listen to the podcast</a
+            >
+            <!-- TODO: replace with the question form, email, or DEV thread -->
+            <a class="btn" href="#" target="_blank" rel="noopener"
+              >Send a question</a
+            >
+            <a
+              class="btn"
+              href="https://x.com/codenewbies"
+              target="_blank"
+              rel="noopener"
+              >Follow @codenewbies</a
+            >
+          </div>
+        </div>
+        <div class="onair-sign" aria-hidden="true">
+          On air<span>CodeNewbie</span>
+        </div>
+      </div>
+    </section>
+
     <div class="checker" role="presentation"></div>
 
     <!-- ================= deck ================= -->
@@ -2081,6 +2216,20 @@
         <p class="eyebrow">Path</p>
         <h2>From the English department to developer relations</h2>
         <ol class="path">
+          <li>
+            <div class="yr"><span>2026</span></div>
+            <div>
+              <h4>
+                Host, CodeNewbie podcast
+                <span>at Major League Hacking and DEV</span>
+              </h4>
+              <p>
+                Host of the relaunched CodeNewbie podcast, the show that got me
+                through my own career change, now for people learning to build
+                with AI.
+              </p>
+            </div>
+          </li>
           <li>
             <div class="yr"><span>2024 to 2026</span></div>
             <div>
