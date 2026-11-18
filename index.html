@@ -488,9 +488,6 @@
           margin: 40px 0 56px;
           align-self: flex-end;
         }
-        .sticker.mic {
-          order: 2;
-        }
         .sticker[href^="https://dev.to"] {
           width: min(9vw, 40px) !important;
         }
@@ -566,7 +563,9 @@
           transform: translate(-50%, -10px) rotate(5deg);
         }
         .sticker.mic .tag {
-          transform: translate(-50%, -4px) rotate(-5deg);
+          top: 100%;
+          bottom: auto;
+          transform: translate(-50%, 6px) rotate(-5deg);
         }
       }
 
@@ -1708,7 +1707,7 @@
         ><span class="tag">the index</span></a
       >
       <a
-        class="sticker"
+        class="sticker hide-sm"
         href="#work"
         data-card="1"
         data-x="31"
@@ -1768,22 +1767,21 @@
       >
       <a
         class="sticker mic"
-        href="https://www.youtube.com/playlist?list=PLegenQQNme4A"
-        target="_blank"
-        rel="noopener"
+        href="#onair"
         data-x="21"
         data-y="76"
-        data-row="bottom"
+        data-row="top"
         style="width: 64px"
         ><span class="inner"
           ><svg viewBox="0 0 80 120"><use href="#s-mic" /></svg></span
-        ><span class="tag">talks playlist</span></a
+        ><span class="tag">CodeNewbie</span></a
       >
       <a
-        class="sticker hide-sm"
+        class="sticker"
         href="#path"
         data-x="13"
         data-y="46"
+        data-row="bottom"
         style="width: 72px"
         ><span class="inner"
           ><svg viewBox="0 0 100 130"><use href="#s-flower" /></svg></span
@@ -1953,7 +1951,8 @@
             The CodeNewbie podcast is back, from Major League Hacking and DEV.
             This season is for people who built something with AI and want to
             understand what's underneath it, through the stories of the people
-            who figured it out first. New episodes come out on Wednesdays.
+            who figured it out first. New episodes come out every other
+            Wednesday.
           </p>
           <p>
             Got a question you'd rather not ask out loud? Send it in. It might
@@ -2225,9 +2224,14 @@
                 <span>at Major League Hacking and DEV</span>
               </h4>
               <p>
-                Host of the relaunched CodeNewbie podcast, the show that got me
-                through my own career change, now for people learning to build
-                with AI.
+                Host of the relaunched
+                <a
+                  href="https://www.codenewbie.org"
+                  target="_blank"
+                  rel="noopener"
+                  >CodeNewbie podcast</a
+                >, the show that got me through my own career change, now for
+                people learning to build with AI.
               </p>
             </div>
           </li>
@@ -2483,6 +2487,10 @@
           <div>
             <h3>listen</h3>
             <ul>
+              <li>
+                <a href="https://www.codenewbie.org">CodeNewbie</a
+                ><small>Host, season 28 from December 2, 2026</small>
+              </li>
               <li>
                 <a href="https://www.youtube.com/watch?v=3TV5rTaXXH8"
                   >The Next Era of Smart Contract Security</a
